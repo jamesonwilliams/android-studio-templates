@@ -8,13 +8,18 @@ fun emptyActivity(
 ) = """
 package ${escapeKotlinIdentifier(packageName)}
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import dagger.hilt.android.AndroidEntryPoint
 
-class $activityClass : AppCompatActivity() {
+@AndroidEntryPoint
+class $activityClass : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContent {
+          // TODO: add root UI
+        }
     }
 }
-
 """

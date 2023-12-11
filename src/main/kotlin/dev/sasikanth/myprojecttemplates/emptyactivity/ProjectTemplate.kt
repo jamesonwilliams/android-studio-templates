@@ -17,9 +17,9 @@ import java.io.File
 
 val projectTemplate
   get() = template {
-    name = "My Project Template"
-    description = "My Project Template"
-    minApi = 21
+    name = "List/Detail App"
+    description = "Creates a simple list/detail with MVI architecture. Uses Kotlin, Jetpack Compose, Retrofit, Room, Hilt, Coil"
+    minApi = 24
     constraints = listOf(
       TemplateConstraint.AndroidX,
       TemplateConstraint.Kotlin
@@ -35,7 +35,7 @@ val projectTemplate
 
     val addComposeDependencies = booleanParameter {
       name = "Add Compose Dependencies"
-      default = false
+      default = true
     }
 
     val packageName = defaultPackageNameParameter

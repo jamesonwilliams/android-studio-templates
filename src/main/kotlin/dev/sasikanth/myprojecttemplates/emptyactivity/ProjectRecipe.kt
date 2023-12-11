@@ -6,8 +6,8 @@ import com.android.tools.idea.wizard.template.RecipeExecutor
 import com.android.tools.idea.wizard.template.impl.activities.common.addAllKotlinDependencies
 import com.android.tools.idea.wizard.template.impl.activities.common.addMaterial3Dependency
 
-private const val COMPOSE_BOM_VERSION = "2022.10.00"
-private const val COMPOSE_KOTLIN_COMPILER_VERSION = "1.3.2"
+private const val COMPOSE_BOM_VERSION = "2023.10.01"
+private const val COMPOSE_KOTLIN_COMPILER_VERSION = "1.5.1"
 
 fun RecipeExecutor.projectRecipe(
   moduleData: ModuleTemplateData,
@@ -19,7 +19,7 @@ fun RecipeExecutor.projectRecipe(
   addMaterial3Dependency()
 
   if (canAddComposeDependencies) {
-    addDependency(mavenCoordinate = "androidx.activity:activity-compose:1.5.1")
+    addDependency(mavenCoordinate = "androidx.activity:activity-compose:1.8.1")
 
     // Add Compose dependencies, using the BOM to set versions
     addPlatformDependency(mavenCoordinate = "androidx.compose:compose-bom:$COMPOSE_BOM_VERSION")
