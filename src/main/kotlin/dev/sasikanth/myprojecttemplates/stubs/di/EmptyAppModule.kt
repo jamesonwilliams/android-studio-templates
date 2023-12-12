@@ -1,4 +1,4 @@
-package dev.sasikanth.myprojecttemplates.emptyactivity
+package dev.sasikanth.myprojecttemplates.stubs.di
 
 
 import com.android.tools.idea.wizard.template.escapeKotlinIdentifier

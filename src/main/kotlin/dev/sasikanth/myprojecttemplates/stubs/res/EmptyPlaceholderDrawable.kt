@@ -1,4 +1,4 @@
-package dev.sasikanth.myprojecttemplates.emptyactivity
+package dev.sasikanth.myprojecttemplates.stubs.res
 
 fun placeholderDrawable() = """
 <vector xmlns:android="http://schemas.android.com/apk/res/android"

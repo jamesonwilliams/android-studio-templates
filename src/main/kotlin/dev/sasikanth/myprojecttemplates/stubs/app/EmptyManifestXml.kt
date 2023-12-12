@@ -1,4 +1,4 @@
-package dev.sasikanth.myprojecttemplates.emptyactivity
+package dev.sasikanth.myprojecttemplates.stubs.app
 
 import org.jetbrains.kotlin.lombok.utils.capitalize
 

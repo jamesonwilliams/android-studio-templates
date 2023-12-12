@@ -1,4 +1,4 @@
-package dev.sasikanth.myprojecttemplates.emptyactivity
+package dev.sasikanth.myprojecttemplates
 
 import com.android.tools.idea.npw.module.recipes.addTestDependencies
 import com.android.tools.idea.npw.module.recipes.generateManifest
@@ -6,7 +6,13 @@ import com.android.tools.idea.wizard.template.ModuleTemplateData
 import com.android.tools.idea.wizard.template.PackageName
 import com.android.tools.idea.wizard.template.RecipeExecutor
 import com.android.tools.idea.wizard.template.impl.activities.common.addAllKotlinDependencies
-import dev.sasikanth.myprojecttemplates.*
+import dev.sasikanth.myprojecttemplates.stubs.app.emptyApplication
+import dev.sasikanth.myprojecttemplates.stubs.app.emptyManifestXml
+import dev.sasikanth.myprojecttemplates.stubs.data.*
+import dev.sasikanth.myprojecttemplates.stubs.di.emptyAppModule
+import dev.sasikanth.myprojecttemplates.stubs.res.errorDrawable
+import dev.sasikanth.myprojecttemplates.stubs.res.placeholderDrawable
+import dev.sasikanth.myprojecttemplates.stubs.ui.*
 import org.jetbrains.kotlin.lombok.utils.capitalize
 
 fun RecipeExecutor.projectRecipe(
@@ -14,6 +20,7 @@ fun RecipeExecutor.projectRecipe(
     packageName: PackageName,
     itemName: String,
     restApiUrl: String,
+    useRoom: Boolean,
 ) {
     applyPlugin("com.google.devtools.ksp", "1.9.10-1.0.13")
     addAllKotlinDependencies(moduleData, revision = "1.9.10")
@@ -23,7 +30,7 @@ fun RecipeExecutor.projectRecipe(
 
     // Discretionary packages...
     addRetrofitDependencies()
-    addRoomDependencies()
+    if (useRoom) addRoomDependencies()
     addHiltDependencies()
     addNavDependencies()
     addComposeDependencies()
@@ -100,11 +107,11 @@ fun RecipeExecutor.projectRecipe(
 
     // Data
     save(
-        emptyRepository(packageName, itemName),
+        emptyRepository(packageName, itemName, useRoom),
         moduleData.srcDir.resolve("data/${itemName.capitalize()}Repository.kt")
     )
     save(
-        emptyDataModel(packageName, itemName),
+        emptyDataModel(packageName, itemName, useRoom),
         moduleData.srcDir.resolve("data/${itemName.capitalize()}Model.kt")
     )
 
@@ -127,18 +134,20 @@ fun RecipeExecutor.projectRecipe(
     )
 
     // Database
-    save(
-        emptyDbDataSource(packageName, itemName),
-        moduleData.srcDir.resolve("data/db/Db${itemName.capitalize()}DataSource.kt")
-    )
-    save(
-        emptyDbDao(packageName, itemName),
-        moduleData.srcDir.resolve("data/db/Db${itemName.capitalize()}Dao.kt")
-    )
-    save(
-        emptyAppDatabase(packageName, itemName),
-        moduleData.srcDir.resolve("data/db/AppDatabase.kt")
-    )
+    if (useRoom) {
+        save(
+            emptyDbDataSource(packageName, itemName),
+            moduleData.srcDir.resolve("data/db/Db${itemName.capitalize()}DataSource.kt")
+        )
+        save(
+            emptyDbDao(packageName, itemName),
+            moduleData.srcDir.resolve("data/db/Db${itemName.capitalize()}Dao.kt")
+        )
+        save(
+            emptyAppDatabase(packageName, itemName),
+            moduleData.srcDir.resolve("data/db/AppDatabase.kt")
+        )
+    }
 
     // Drawables
     save(

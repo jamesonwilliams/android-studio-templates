@@ -1,4 +1,4 @@
-package dev.sasikanth.myprojecttemplates
+package dev.sasikanth.myprojecttemplates.stubs.data
 
 import com.android.tools.idea.wizard.template.escapeKotlinIdentifier
 import org.jetbrains.kotlin.lombok.utils.capitalize

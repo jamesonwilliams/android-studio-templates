@@ -1,17 +1,7 @@
 package dev.sasikanth.myprojecttemplates
 
-import com.android.tools.idea.wizard.template.Category
-import com.android.tools.idea.wizard.template.FormFactor
-import com.android.tools.idea.wizard.template.ModuleTemplateData
-import com.android.tools.idea.wizard.template.PackageNameWidget
-import com.android.tools.idea.wizard.template.TemplateConstraint
-import com.android.tools.idea.wizard.template.TemplateData
-import com.android.tools.idea.wizard.template.TextFieldWidget
-import com.android.tools.idea.wizard.template.WizardUiContext
+import com.android.tools.idea.wizard.template.*
 import com.android.tools.idea.wizard.template.impl.defaultPackageNameParameter
-import com.android.tools.idea.wizard.template.stringParameter
-import com.android.tools.idea.wizard.template.template
-import dev.sasikanth.myprojecttemplates.emptyactivity.projectRecipe
 import java.io.File
 
 val projectTemplate
@@ -39,10 +29,15 @@ val projectTemplate
             name = "Name of the item being listed?"
             default = "Item"
         }
+        val useRoom = booleanParameter {
+            name = "Add Room persistence?"
+            default = true
+        }
 
         widgets(
             TextFieldWidget(restApiUrl),
             TextFieldWidget(itemName),
+            CheckBoxWidget(useRoom),
             PackageNameWidget(packageName),
         )
 
@@ -56,6 +51,7 @@ val projectTemplate
                 packageName = packageName.value,
                 itemName = itemName.value,
                 restApiUrl = restApiUrl.value,
+                useRoom = useRoom.value,
             )
         }
     }

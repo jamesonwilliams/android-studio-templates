@@ -1,4 +1,4 @@
-package dev.sasikanth.myprojecttemplates.emptyactivity
+package dev.sasikanth.myprojecttemplates
 
 import com.android.tools.idea.wizard.template.RecipeExecutor
 
