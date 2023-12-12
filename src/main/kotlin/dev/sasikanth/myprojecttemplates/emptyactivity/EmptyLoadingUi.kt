@@ -3,10 +3,7 @@ package dev.sasikanth.myprojecttemplates.emptyactivity
 
 import com.android.tools.idea.wizard.template.escapeKotlinIdentifier
 
-fun emptyLoadingUi(
-    packageName: String,
-    itemName: String,
-) = """
+fun emptyLoadingUi(packageName: String) = """
 package ${escapeKotlinIdentifier(packageName)}.ui.shared
 
 import androidx.compose.foundation.layout.Arrangement

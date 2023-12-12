@@ -3,10 +3,7 @@ package dev.sasikanth.myprojecttemplates.emptyactivity
 
 import com.android.tools.idea.wizard.template.escapeKotlinIdentifier
 
-fun emptyErrorUi(
-    packageName: String,
-    itemName: String,
-) = """
+fun emptyErrorUi(packageName: String) = """
 package ${escapeKotlinIdentifier(packageName)}.ui.shared
 
 import androidx.compose.foundation.layout.Arrangement

@@ -8,13 +8,14 @@ package ${escapeKotlinIdentifier(packageName)}.data.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import ${escapeKotlinIdentifier(packageName)}.data.${itemName.capitalize()}Model
 
 @Database(
-    entities = [Db${itemName.capitalize()}::class],
+    entities = [${itemName.capitalize()}Model::class],
     version = 1,
-    exportSchema = false,
+    exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun ${itemName.lowercase()}Dao(): Db${itemName.capitalize()}Dao
+    abstract fun ${itemName.lowercase()}Dao(): ${itemName.capitalize()}Dao
 }
 """

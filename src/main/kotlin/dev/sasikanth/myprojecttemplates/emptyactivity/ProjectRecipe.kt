@@ -8,7 +8,6 @@ import com.android.tools.idea.wizard.template.RecipeExecutor
 import com.android.tools.idea.wizard.template.impl.activities.common.addAllKotlinDependencies
 import dev.sasikanth.myprojecttemplates.*
 import org.jetbrains.kotlin.lombok.utils.capitalize
-import java.io.File
 
 fun RecipeExecutor.projectRecipe(
     moduleData: ModuleTemplateData,
@@ -38,7 +37,7 @@ fun RecipeExecutor.projectRecipe(
 
     // Activity, App, and Navigation Component
     save(
-        emptyActivity(packageName, itemName),
+        emptyActivity(packageName, moduleData.themesData.main.name),
         moduleData.srcDir.resolve("ui/MainActivity.kt")
     )
     save(
@@ -68,7 +67,7 @@ fun RecipeExecutor.projectRecipe(
         moduleData.srcDir.resolve("ui/details/${itemName.capitalize()}DetailViewModel.kt")
     )
 
-    val (_, _, resOut, manifestOut) = moduleData
+    val (_, _, _, manifestOut) = moduleData
 
     // Manifest
     mergeXml(
@@ -81,11 +80,11 @@ fun RecipeExecutor.projectRecipe(
 
     // Generic UI
     save(
-        emptyErrorUi(packageName, itemName),
+        emptyErrorUi(packageName),
         moduleData.srcDir.resolve("ui/shared/ErrorUi.kt")
     )
     save(
-        emptyLoadingUi(packageName, itemName),
+        emptyLoadingUi(packageName),
         moduleData.srcDir.resolve("ui/shared/LoadingUi.kt")
     )
     save(
@@ -101,12 +100,12 @@ fun RecipeExecutor.projectRecipe(
 
     // Data
     save(
-        emptyDataState(packageName),
-        moduleData.srcDir.resolve("data/DataState.kt")
-    )
-    save(
         emptyRepository(packageName, itemName),
         moduleData.srcDir.resolve("data/${itemName.capitalize()}Repository.kt")
+    )
+    save(
+        emptyDataModel(packageName, itemName),
+        moduleData.srcDir.resolve("data/${itemName.capitalize()}Model.kt")
     )
 
     // Net
@@ -131,10 +130,6 @@ fun RecipeExecutor.projectRecipe(
     save(
         emptyDbDataSource(packageName, itemName),
         moduleData.srcDir.resolve("data/db/Db${itemName.capitalize()}DataSource.kt")
-    )
-    save(
-        emptyDbModel(packageName, itemName),
-        moduleData.srcDir.resolve("data/db/Db${itemName.capitalize()}.kt")
     )
     save(
         emptyDbDao(packageName, itemName),

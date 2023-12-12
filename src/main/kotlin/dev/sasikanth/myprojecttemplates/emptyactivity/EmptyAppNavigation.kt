@@ -21,7 +21,7 @@ import ${escapeKotlinIdentifier(packageName)}.ui.details.${itemName.capitalize()
 import ${escapeKotlinIdentifier(packageName)}.ui.list.${itemName.capitalize()}ListScreen
 
 @Composable
-fun ${itemName.capitalize()}AppUi() {
+fun AppNavigation() {
     val navController: NavHostController = rememberNavController()
     NavHost(
         navController = navController,
@@ -29,12 +29,12 @@ fun ${itemName.capitalize()}AppUi() {
     ) {
         composable("list") {
             ${itemName.capitalize()}ListScreen { ${itemName.lowercase()}Id ->
-                navController.navigate("detail/${'$'}${itemName.lowercase()}Id")
+                navController.navigate("detail/$${itemName.lowercase()}Id")
             }
         }
         composable(
             route = "detail/{${itemName.lowercase()}Id}",
-            arguments = listOf(navArgument("${itemName.lowercase()}Id") { type = NavType.IntType }),
+            arguments = listOf(navArgument("${itemName.lowercase()}Id") { type = NavType.IntType })
         ) {
             ${itemName.capitalize()}DetailScreen {
                 navController.navigateUp()

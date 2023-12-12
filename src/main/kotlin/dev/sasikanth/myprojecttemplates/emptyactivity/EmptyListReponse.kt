@@ -11,11 +11,12 @@ fun emptyListResponse(
 package ${escapeKotlinIdentifier(packageName)}.data.net
 
 import com.squareup.moshi.JsonClass
+import ${escapeKotlinIdentifier(packageName)}.data.${itemName.capitalize()}Model
 
 @JsonClass(generateAdapter = true)
 data class ${itemName.capitalize()}ListResponse(
     val info: Info,
-    val results: List<Result>
+    val results: List<${itemName.capitalize()}Model>
 ) {
     @JsonClass(generateAdapter = true)
     data class Info(
@@ -24,33 +25,5 @@ data class ${itemName.capitalize()}ListResponse(
         val pages: Int,
         val prev: String?
     )
-
-    @JsonClass(generateAdapter = true)
-    data class Result(
-        val created: String,
-        val episode: List<String>,
-        val gender: String,
-        val id: Int,
-        val image: String,
-        val location: Location,
-        val name: String,
-        val origin: Origin,
-        val species: String,
-        val status: String,
-        val type: String,
-        val url: String
-    ) {
-        @JsonClass(generateAdapter = true)
-        data class Location(
-            val name: String,
-            val url: String
-        )
-
-        @JsonClass(generateAdapter = true)
-        data class Origin(
-            val name: String,
-            val url: String
-        )
-    }
 }
 """
