@@ -3,10 +3,11 @@
 
 ## What is this
 
-This implements an Android Studio project template to create new project
-in Android Studio.
+This implements an Android Studio project template to create new project in Android Studio.
 
 The template is based on my List/Detail app based on my [Rick & Morty](https://github.com/jamesonwilliams/rick-morty-compose/tree/main) demo app.
+
+<img src="screenshots/template-entry.png" alt="List/Detail app entry in Android Studio project templates." />
 
 The template accepts an item name, which will be used widely around the project for file naming and model naming. For example, your list detail app might list animals, and show details on a particular Animal.
 
