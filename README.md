@@ -14,6 +14,12 @@ The project also accepts a URL which will be plugged into Retrofit.
 
 <img src="screenshots/config-screen.png" alt="Example of configuring a new project using the template." />
 
+## Cool, how can I install it?
+
+There is a pre-built plugin [under release](./release/my-project-templates-1.0-SNAPSHOT.zip).
+
+Follow [these instructions](https://sasikanth.dev/creating-project-templates-in-android-studio/#installing-the-plugin) to install it in your Android Studio.
+
 ## Where did it come from?
 
 This is a fork of [Sasikanth](https://sasikanth.dev/creating-project-templates-in-android-studio/)'s project.
