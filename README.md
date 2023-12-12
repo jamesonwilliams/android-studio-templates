@@ -1,4 +1,4 @@
-# my-project-templates
+# Android Studio Project Templates
 
 
 ## What is this
