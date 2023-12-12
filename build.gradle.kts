@@ -4,8 +4,8 @@ plugins {
     id("org.jetbrains.intellij") version "1.16.1"
 }
 
-group = "dev.sasikanth"
-version = "1.0-SNAPSHOT"
+group = "org.nosemaj"
+version = "0.1"
 
 repositories {
     mavenCentral()
@@ -40,8 +40,8 @@ tasks {
     }
 
     signPlugin {
-        certificateChain.set(System.getenv("CERTIFICATE_CHAIN"))
-        privateKey.set(System.getenv("PRIVATE_KEY"))
+        certificateChainFile.set(file("certificate/chain.crt"))
+        privateKeyFile.set(file("certificate/private.pem"))
         password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
     }
 

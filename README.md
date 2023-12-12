@@ -1,7 +1,6 @@
 # Android Studio Project Templates
 
-
-## What is this
+## What is this?
 
 This implements an Android Studio project template to create new project in Android Studio.
 
@@ -17,17 +16,21 @@ The project also accepts a URL which will be plugged into Retrofit.
 
 ## Cool, how can I install it?
 
-There is a pre-built plugin [under release](./release/my-project-templates-1.0-SNAPSHOT.zip).
+Soon, you'll be able to install the plugin from the [JetBrains IDE Marketplace](https://plugins.jetbrains.com/plugin/23316-list-detail-app-project-template?noRedirect=true).
 
-Follow [these instructions](https://sasikanth.dev/creating-project-templates-in-android-studio/#installing-the-plugin) to install it in your Android Studio.
+Unit then, you can download a pre-built plugin [here](./release). Follow [these instructions](https://sasikanth.dev/creating-project-templates-in-android-studio/#installing-the-plugin) to install it in your Android Studio.
 
 ## Where did it come from?
 
-This is a fork of [Sasikanth](https://sasikanth.dev/creating-project-templates-in-android-studio/)'s project.
+This is a fork of [Sasikanth](https://github.com/msasikanth/my-project-templates)'s project.
 
-More details on how to build/deploy the plugin are in [Sasikanth](https://www.sasikanth.dev/creating-project-templates-in-android-studio/)'s blog.
+More details on how to build/deploy the plugin are in [Sasikanth's blog](https://www.sasikanth.dev/creating-project-templates-in-android-studio/).
 
 Thank you to Sasikanth for his earlier work.
+
+## Why Doesn't this showcase Approaches X,Y, instead?
+
+Got feedback on the template? [Create an issue](https://github.com/jamesonwilliams/android-studio-templates/issues/new)!
 
 ## Versioning Status
 

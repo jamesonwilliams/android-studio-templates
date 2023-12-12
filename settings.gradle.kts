@@ -1,1 +1,1 @@
-rootProject.name = "my-project-templates"
+rootProject.name = "as-list-detail-template"
