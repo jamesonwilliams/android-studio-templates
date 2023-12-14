@@ -16,9 +16,9 @@ The project also accepts a URL which will be plugged into Retrofit.
 
 ## Cool, how can I install it?
 
-Soon, you'll be able to install the plugin from the [JetBrains IDE Marketplace](https://plugins.jetbrains.com/plugin/23316-list-detail-app-project-template?noRedirect=true).
+You can install it from the [JetBrains IDE Marketplace](https://plugins.jetbrains.com/plugin/23316-list-detail-app-project-template?noRedirect=true) directly from the Android Studio Welcome Wizard:
 
-Unit then, you can download a pre-built plugin [here](./release). Follow [these instructions](https://sasikanth.dev/creating-project-templates-in-android-studio/#installing-the-plugin) to install it in your Android Studio.
+https://github.com/jamesonwilliams/android-studio-templates/assets/899569/9d860e89-116a-4998-b436-91af6cbdac35
 
 ## Where did it come from?
 
