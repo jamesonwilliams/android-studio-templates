@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "org.nosemaj"
-version = "0.1"
+version = "0.2"
 
 repositories {
     mavenCentral()
@@ -36,7 +36,7 @@ tasks {
 
     patchPluginXml {
         sinceBuild.set("231")
-        // untilBuild.set("231.*")
+        untilBuild.set("241.*")
     }
 
     signPlugin {

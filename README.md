@@ -34,5 +34,18 @@ Got feedback on the template? [Create an issue](https://github.com/jamesonwillia
 
 ## Versioning Status
 
-Currently I've tested the project build in IntelliJ IDEA 2023.3, using the plugin in Android Studio Hedgehog (2023.1.1).
+Version 0.2 supports these Android Studio versions:
+
+| Friendly Name | Release Name | Internal Build Number |
+|---------------|--------------|-----------------------|
+| Android Studio Koala | 2024.1.1 Canary 3 | 241.14494.158.2411.11648550 |
+| Android Studio Jellyfish | 2023.3.1 RC 1 | 233.14808.21.2331.11643467 |
+| Android Studio Iguana | 2023.2.1 Patch 1 | 232.10300.40.2321.11567975 |
+| Android Studio Iguana | 2023.2.1 Release | 232.10227.8.2321.11479570 |
+| Android Studio Iguana | 2023.2.1 Canary 8 | 232.9921.47.2321.10958940 |
+| Android Studio Hedgehog | 2023.1.1 Patch 2 | 231.9392.1.2311.11330709 |
+| Android Studio Hedgehog | 2023.1.1 Patch 1 | 231.9392.1.2311.11255304 |
+| Android Studio Hedgehog | 2023.1.1 Release | 231.9392.1.2311.11076708 |
+
+Version 0.1 supported Android Studio Hedgehog (2023.1.1).
 
